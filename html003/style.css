@@ -1,0 +1,28 @@
+h1{
+    font-size: 30px;
+    color: #666666;
+}
+
+h2{
+    font-size: 22px;
+    color: #666666;
+}
+
+p{
+    font-size: 16px;
+    color: #666666;
+    font-weight: 600;
+}
+
+a{
+    text-decoration: none;
+    font-size: 16px;
+    color: #666666;
+    font-weight: 600;
+}
+
+.musica{
+    display: flex;
+    justify-content: space-between;
+    width: 30%;
+}
