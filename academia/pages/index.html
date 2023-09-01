@@ -5,33 +5,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Academia</title>
     <link rel="stylesheet" type="text/css" href="../css/index.css" media="">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" /> -->
 </head>
 <body>
     <header>
         <nav class="navbar">
             <!-- <a href="#" class="logo">4Life Academia</a> -->
-            <img src="../imgs/logo.png" alt="" class="logo">
+            <div class="logo">
+                <img src="../imgs/logo.png" alt="" class="logo-img">
+                <p class="logo-text">4Life Academia</p>
+            </div>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#">Início</a></li>
-                <li class="nav-item"><a href="#">Modalidades</a></li>
-                <li class="nav-item"><a href="#">Planos</a></li>
-                <li class="nav-item"><a href="#">Contato</a></li>
+                <li class="nav-item"><a href="#idModalidades">Modalidades</a></li>
+                <!-- <li class="nav-item"><a href="#">Planos</a></li> -->
+                <li class="nav-item"><a href="#idContato">Contato</a></li>
             </ul>
         </nav>
-    </header>
-    <main>
+
         <section class="carousel">
             <div class="carousel-text">
-                <h4>Modalidades</h4>
-                <h2>NATAÇÃO</h2>
-                <p>A 4Life reúne professores e especialistas para redefinir o padrão técnico e didático utilizados na natação com mais segurança e coerência na prescrição do treino.</p>
+                <h1>Dê o seu melhor hoje se quiser um amanhã diferente</h2>
+                <br>
+                <p>Cuide de sua saúde e bem estar com a alegria e bom humor que só a Academia 4Life proporciona para você.</p>
+                <br>
+            </div>
+            <div class="carousel-button">
+                <p>Agende uma visita</p>
+                <a href="#" class="fa fa-whatsapp"></a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="modalidades" id="idModalidades">
+            <h2>Conheça nossas modalidades</h2>
+            <div class="modalidades-all">
+                <div class="modalidades-item">
+                    <!-- <img src="../imgs/musculacao.jpg" alt=""> -->
+                    <div class="img-musculacao"></div>
+                    <div class="modalidades-item-text">
+                        <h3>Musculação</h3>
+                        <p>A musculação é uma prática corporal que envolve aspectos físicos como flexibilidade, coordenação motora e força. A sua prática tem como objetivo cuidar da saúde, bem-estar.</p>
+                    </div>
+                </div>
+                <div class="modalidades-item">
+                    <!-- <img src="../imgs/natacao.jpg" alt=""> -->
+                    <div class="img-natacao"></div>
+                    <div class="modalidades-item-text">
+                        <h3>Natação</h3>
+                        <p>A natação oferece benefícios como: resistência muscular, diminuição do estresse, colesterol e pressão arterial e na melhora da circulação sanguínea.</p>
+                    </div>
+                </div>
+                <div class="modalidades-item">
+                    <!-- <img src="../imgs/yoga.jpg" alt=""> -->
+                    <div class="img-yoga"></div>
+                    <div class="modalidades-item-text">
+                        <h3>Yoga</h3>
+                        <p>O Yoga é uma prática que tem como objetivo trabalhar o corpo e a mente de forma interligada, com exercícios que auxiliam no controle do estresse, ansiedade, dores no corpo e na coluna.</p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-
+        <section class="contato" id="idContato">
+            <h2>Contato</h2>
+            <div class="contato-text">
+                <p>Rua XV de Novembro, 123 - Glória, Joinville - SC, 12345-678, Brasil</p>
+                <p>contato@4lifeacademia.com.br</p>
+                <div class="social-media">
+                    <a href="https://www.facebook.com/" class="fa fa-facebook"></a>
+                    <a href="https://www.instagram.com/" class="fa fa-instagram"></a>
+                    <a href="https://web.whatsapp.com/" class="fa fa-whatsapp"></a>
+                </div>
+            </div>
+        </section>
     </footer>
 </body>
 </html>
