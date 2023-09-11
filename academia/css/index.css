@@ -87,9 +87,10 @@ header{
     /* background-image: linear-gradient(to left, transparent 0%, rgba(0, 0, 0, 0.9) 80%), url('../imgs/1128335.jpg'); */
     background-image: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 1) 99%), url('../imgs/1128335.jpg');
     background-size: 150%;
+
+    background-attachment: scroll;
     background-position: center top;
     background-repeat: no-repeat;
-    background-attachment: scroll;
     padding-bottom: 3rem 0;
     /* display: flex;
     flex-flow: column nowrap;
