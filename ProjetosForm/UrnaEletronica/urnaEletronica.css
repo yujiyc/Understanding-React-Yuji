@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap');
+*{
+    font-family: 'Nunito', sans-serif;
+    /* font-weight: 500; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: #121214;
+}
+
+.form{
+    overflow: hidden;
+    width: 700px;
+    margin: 64px auto;
+    
+    background: #121214;
+    border: 1px solid #202024;
+    border-radius: 20px;
+    
+    overflow: hidden;
+}
+
+.form .input input{
+    width: 100%;
+    background: #212125;
+    border: 1px solid #313137;
+    border-radius: 20px;
+    outline: none;
+    color: #ffffff;
+}
+
+.form .input input{
+    height: 64px;
+    padding: 0 16px;
+}
+
+.form .input + .buttons{
+    margin-top: 20px;
+}
+
+button{
+    width: 30%;
+    background: #5CA37A;
+    border: 1px solid #29292E;
+    border-radius: 20px;
+    outline: none;
+    color: #FFFFFF;
+    height: 44px;
+    font-weight: 600;
+}
+
+button:hover {
+    background: #37C77F;
+    transition: background-color 0.8s;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+
+.img-candidato{
+    width: 100%;
+    height: 300px;
+    background: #202024;
+}
+
+.input-candidato{ 
+    padding: 70px 80px;
+    padding-top: 40px;
+}
+
+.info-candidato h2{
+    font-size: 18px;
+    color: #d6d6d6;
+    font-weight: 700;
+    padding-top: 10px;
+    text-transform: uppercase;
+}
+
+.info-candidato{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-candidato img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: top;
+}
