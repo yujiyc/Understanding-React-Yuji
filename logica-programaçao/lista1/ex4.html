@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idNota1" placeholder="Nota 1">
+
+        <input type="number" id="idNota2" placeholder="Nota 1">
+
+        <input type="button" value="Confirmar" onclick="mostrarMedia()">
+
+        <br><output id="idOut" class="linha"></output>
+    </form>
+
+    <script>
+        function mostrarMedia() {
+            let n1 = document.getElementById("idNota1").value 
+            let n2 = document.getElementById("idNota2").value
+
+            let s = Number(n1) + Number(n2)
+            let retorno = Number(s) / 2
+
+            document.getElementById("idOut").innerText = "A média entre " + n1 + " e " + n2 + " é igual a " + retorno
+        }
+    </script>
+</body>
+</html>

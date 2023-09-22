@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idNumero1" placeholder="Informe um numero">
+        <input type="text" id="idOperador" placeholder="Informe um operador (+, -, *, /)">
+        <input type="number" id="idNumero2" placeholder="Informe outro numero">
+         
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let n1 = document.getElementById("idNumero1").value
+            let op = document.getElementById("idOperador").value
+            let n2 = document.getElementById("idNumero2").value
+
+            let soma = parseInt(n1) + parseInt(n2)
+            let subtracao = n1 - n2
+            let multiplicacao = n1 * n2
+            let divisao = n1 / n2
+            
+            if(op=='+'){
+                document.getElementById("idOut").innerText = n1 + " + " + n2 + " = " + soma
+            }
+            else if(op=='-'){
+                document.getElementById("idOut").innerText = n1 + " - " + n2 + " = " + subtracao
+            }
+            else if(op=='*'){
+                document.getElementById("idOut").innerText = n1 + " * " + n2 + " = " + multiplicacao
+            }
+            else if(op=='/'){
+                document.getElementById("idOut").innerText = n1 + " / " + n2 + " = " + divisao
+            }
+            // switch (op) {
+            //     case 'soma':
+            //         document.getElementById("idOut").innerText = n1 + " + " + n2 + " = " + n1+n2
+            //     case '-':
+            //         document.getElementById("idOut").innerText = n1 + " - " + n2 + " = " + n1-n2
+            //     case '*':
+            //         document.getElementById("idOut").innerText = n1 + " * " + n2 + " = " + n1*n2
+            //     case '/':
+            //     if (n2 !== 0) {
+            //         document.getElementById("idOut").innerText = n1 + " / " + n2 + " = " + n1/n2
+            //     } else {
+            //         return "Divisão por zero não é permitida.";
+            //     }
+            //     default:
+            //     document.getElementById("idOut").innerText = "Operador inválido"
+            // }
+        }
+    </script>
+</body>
+</html>

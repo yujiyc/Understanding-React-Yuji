@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idNumero" placeholder="Informe um numero inteiro">
+
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut1"></output>
+        <br><output id="idOut2"></output>
+    </form>
+
+    <script>
+        function mostrar() {
+            let n = document.getElementById("idNumero").value
+
+            let antecessor = Number(n) - 1
+            let sucessor = Number(n) + 1
+
+            document.getElementById("idOut1").innerText = "O antecessor de " + n + " é " + antecessor
+            document.getElementById("idOut2").innerText = "O sucessor de " + n + " é " + sucessor
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idNumero1" placeholder="Numero 1">
+
+        <input type="number" id="idNumero2" placeholder="Numero 1">
+
+        <input type="button" value="Confirmar" onclick="mostrarSoma()">
+
+        <br><output id="idOut" class="linha"></output>
+    </form>
+
+    <script>
+        function mostrarSoma() {
+            let n1 = document.getElementById("idNumero1").value 
+            let n2 = document.getElementById("idNumero2").value
+
+            let s = Number(n1) + Number(n2)
+
+            document.getElementById("idOut").innerText = "A soma entre " + n1 + " e " + n2 + " é igual a " + s
+        }
+    </script>
+</body>
+</html>

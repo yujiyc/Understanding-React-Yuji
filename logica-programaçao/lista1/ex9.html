@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idLargura" name="idLargura" step="0.01" placeholder="Informe a quantidade de dinheiro (em R$)">
+        <input type="number" id="idAltura" name="idAltura" step="0.01" placeholder="Informe a quantidade de dinheiro (em R$)">
+         
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut1"></output>
+    </form>
+
+    <script>
+        function mostrar() {
+            let largura = document.getElementById("idLargura").value
+            let altura = document.getElementById("idAltura").value
+
+            let area = largura * altura
+            let qtdTinta =  area / 2
+
+            document.getElementById("idOut1").innerText = "Area = " + area + "m² e Quantidade de tinta = " + qtdTinta
+        }
+    </script>
+</body>
+</html>

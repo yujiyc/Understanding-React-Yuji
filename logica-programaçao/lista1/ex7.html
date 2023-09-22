@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idDistancia" name="idDistancia" step="0.01" placeholder="Informe uma distância em metros">
+
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut1"></output><br>
+        <output id="idOutKm"></output><br>
+        <output id="idOutHm"></output><br>
+        <output id="idOutDam"></output><br>
+        <output id="idOutDm"></output><br>
+        <output id="idOutCm"></output><br>
+        <output id="idOutMm"></output><br>
+    </form>
+
+    <script>
+        function mostrar() {
+            let n = document.getElementById("idDistancia").value
+
+            let km = n / 1000  
+            let hm = n / 100 
+            let dam = n / 10 
+            let dm = n * 10
+            let cm = n * 100
+            let mm = n * 1000
+
+            document.getElementById("idOut1").innerText = "A distância de " + n + "m corresponde a:"
+            document.getElementById("idOutKm").innerText = km + "km"
+            document.getElementById("idOutHm").innerText = hm + "hm"
+            document.getElementById("idOutDam").innerText = dam + "dam"
+            document.getElementById("idOutDm").innerText = dm + "dm"
+            document.getElementById("idOutCm").innerText = cm + "cm"
+            document.getElementById("idOutMm").innerText = mm + "mm"
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idNumero" placeholder="Informe um numero real">
+
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut1"></output>
+        <br><output id="idOut2"></output>
+    </form>
+
+    <script>
+        function mostrar() {
+            let n = document.getElementById("idNumero").value
+
+            let dobro = Number(n) * 2
+            let terça_parte = Number(n) / 3
+
+            document.getElementById("idOut1").innerText = "O dobro de " + n + " é " + dobro
+            document.getElementById("idOut2").innerText = "A terça parte de " + n + " é " + terça_parte
+            
+        }
+    </script>
+</body>
+</html>

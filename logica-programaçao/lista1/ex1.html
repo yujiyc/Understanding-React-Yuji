@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="idNome" placeholder="Qual é o seu nome?">
+
+        <input type="button" value="Confirmar" onclick="pegarNome()">
+
+        <br><output id="idOut" class="linha"></output>
+    </form>
+
+    <script>
+        function pegarNome() {
+            let nome = document.getElementById("idNome").value 
+
+            document.getElementById("idOut").innerText = "Olá " + nome + " seja bem vindo"
+        }
+    </script>
+</body>
+</html>

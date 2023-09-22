@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idNumero1" placeholder="Informe um numero">
+        <input type="number" id="idNumero2" placeholder="Informe outro numero">
+        <input type="number" id="idNumero3" placeholder="Informe outro numero">
+         
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let n1 = document.getElementById("idNumero1").value
+            let n2 = document.getElementById("idNumero2").value
+            let n3 = document.getElementById("idNumero3").value
+
+            let maior = 0
+
+            if(n1 < n2 && n2 < n3 && n1 < n3){
+                document.getElementById("idOut").innerText = n3 + " > " + n2 + " > " + n1
+            }
+            else if( n1 > n2 && n2 > n3 && n1 > n3){
+                document.getElementById("idOut").innerText = n1 + " > " + n2 + " > " + n3
+            }
+            else if(n1 < n2 && n2 > n3 && n1 > n3){
+                document.getElementById("idOut").innerText = n2 + " > " + n1 + " > " + n3
+            }
+            else if(n1 > n2 && n2 < n3 && n1 > n3){
+                document.getElementById("idOut").innerText = n1 + " > " + n3 + " > " + n2
+            }
+            else if(n1 > n2 && n2 > n3 && n1 < n3){
+                document.getElementById("idOut").innerText = n2 + " > " + n3 + " > " + n1
+            }
+            else if(n1 > n2 && n2 < n3 && n1 < n3){
+                document.getElementById("idOut").innerText = n3 + " > " + n1 + " > " + n2
+            }
+        }
+    </script>
+</body>
+</html>

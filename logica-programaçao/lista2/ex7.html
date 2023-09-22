@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idSalario" placeholder="Informe um numero">
+         
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let salario = document.getElementById("idSalario").value
+
+            desc25 = salario - (salario * 0.25)
+            desc30 = salario - (salario * 0.3)
+            desc35 = salario - (salario * 0.35)
+
+            if (salario <= 600) { 
+                document.getElementById("idOut").innerText = "O salário líquido é " + salario
+            } else if (salario <= 1200) {
+                document.getElementById("idOut").innerText = "O salário líquido é " + desc25
+            } else if (salario <= 2000) {
+                document.getElementById("idOut").innerText = "O salário líquido é " + desc30
+            } else {
+                document.getElementById("idOut").innerText = "O salário líquido é " + desc35
+            }
+        }
+    </script>
+</body>
+</html>

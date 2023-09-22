@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idPreco" name="idPreco" step="0.01" placeholder="Informe a quantidade de dinheiro (em R$)">
+    
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut1"></output>
+    </form>
+
+    <script>
+        function mostrar() {
+            let preco = document.getElementById("idPreco").value
+
+            precoPromocional = preco - ( preco * 0.05)
+
+            document.getElementById("idOut1").innerText = "Preço original = R$" + preco + " e Preço promocional = R$" + precoPromocional
+        }
+    </script>
+</body>
+</html>

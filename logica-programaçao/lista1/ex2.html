@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="idNome" placeholder="Nome do Funcionário">
+
+        <input type="number" id="idSalario" placeholder="Salário do Funcionário">
+
+        <input type="button" value="Confirmar" onclick="pegarNome()">
+
+        <br><output id="idOut" class="linha"></output>
+    </form>
+
+    <script>
+        function pegarNome() {
+            let nome = document.getElementById("idNome").value 
+            let salario = document.getElementById("idSalario").value
+
+            document.getElementById("idOut").innerText = "O funcionário " + nome + " tem um salário de " + salario + " em Junho."
+        }
+    </script>
+</body>
+</html>

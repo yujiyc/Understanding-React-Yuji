@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idNumero1" placeholder="Informe um numero">
+         
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar() {
+            let n1 = document.getElementById("idNumero1").value
+
+            let maior = 0
+
+            if (n1 >= 30 && n1 <= 90){
+                out.value = "O número " + n1 + " está entre 30 e 90"
+            }
+            else{
+                out.value = "O número " + n1 + " não está entre 30 e 90"
+            }
+            
+        }
+    </script>
+</body>
+</html>
