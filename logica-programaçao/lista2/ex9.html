@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <p>Formas geométricas para calcular a área:</p>
+        <p>1. Círculo</p>
+        <p>2. Retângulo</p>
+        <p>3. Triângulo Retângulo</p>
+        <p>4. Triângulo Equilátero</p>
+        <input type="number" id="idValor" placeholder="Escolha a forma geométrica">
+         
+        <input type="button" value="Confirmar" onclick="mostrar()">
+
+        <br><output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let valor = document.getElementById("idValor").value
+
+            let percentual = 0
+
+            if (valor < 20) {
+                percentual = 0.5
+            } else {
+                percentual = 0.35
+            }
+
+            let lucro = valor * percentual
+            let venda = parseInt(valor) + parseInt(lucro)
+
+            document.getElementById("idOut").innerText = "O valor de venda é " + venda
+        }
+    </script>
+</body>
+</html>

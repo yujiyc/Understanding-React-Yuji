@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idEntrada" placeholder="Informe um ano"><br><br>
+         
+        <input type="button" value="Confirmar" onclick="mostrar()"><br><br>
+
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let anoNascimento = parseInt(document.getElementById("idEntrada").value);
+
+            let anoAtual = new Date().getFullYear();
+
+            let idade = anoAtual - anoNascimento;
+
+            if (idade<18){
+                let anosFaltantes = 18 - idade;
+                document.getElementById("idOut").innerText = "Faltam " + anosFaltantes + " anos para se alistar"
+            
+            } else if (idade===18){
+                document.getElementById("idOut").innerText = "Idade para se alistar"
+            
+            } else{
+                let anosPassados = idade - 18;
+                document.getElementById("idOut").innerText = "Passaram " + anosPassados + " anos do alistamento"
+            }
+        }
+    </script>
+</body>
+</html>

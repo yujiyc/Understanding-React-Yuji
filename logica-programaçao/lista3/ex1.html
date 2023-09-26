@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idEntrada" placeholder="Informe a velocidade do carro"><br><br>
+         
+        <input type="button" value="Confirmar" onclick="mostrar()"><br><br>
+
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let velocidade = document.getElementById("idEntrada").value
+            if (velocidade > 80){
+                let velocidadeExcedida = velocidade - 80;
+                let valorMulta = velocidadeExcedida * 5;
+
+                document.getElementById("idOut").innerText = "Velocidade excedida: " + velocidadeExcedida + "Valor da multa: R$" + valorMulta
+            } else{
+                document.getElementById("idOut").innerText = "Velocidade dentro do limite permitido"
+            }
+        }
+    </script>
+</body>
+</html>

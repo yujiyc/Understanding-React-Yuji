@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idEntrada" placeholder="Informe a distância que deseja percorrer em Km"><br><br>
+         
+        <input type="button" value="Confirmar" onclick="mostrar()"><br><br>
+
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let distancia = parseFloat(document.getElementById("idEntrada").value)
+            
+            if (distancia <= 200) {
+                let precoPassagem = distancia * 0.5
+                document.getElementById("idOut").innerText = "Preço da passagem = R$" + precoPassagem
+            } else {
+                let precoPassagem = distancia * 0.45
+                document.getElementById("idOut").innerText = "Preço da passagem = R$" + precoPassagem
+            }
+        }
+    </script>
+</body>
+</html>

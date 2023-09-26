@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idEntrada" placeholder="Informe um ano"><br><br>
+         
+        <input type="button" value="Confirmar" onclick="mostrar()"><br><br>
+
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let ano = parseInt(document.getElementById("idEntrada").value);
+
+            if((ano%4 === 0 && ano%100 !== 0) || (ano%400 === 0)){
+                document.getElementById("idOut").innerText = ano + " é um ano bissexto."
+            } else{
+                document.getElementById("idOut").innerText = ano + " NÃO é um ano bissexto."
+            }
+        }
+    </script>
+</body>
+</html>

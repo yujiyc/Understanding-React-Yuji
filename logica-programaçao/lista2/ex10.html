@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="idUser" placeholder="Usuário"><br><br>
+
+        <input type="password" id="idSenha" placeholder="Senha"><br><br>
+
+        <input type="button" value="Confirmar" onclick="mostrar()"><br><br>
+        
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        var user1 = "Aluno1" 
+        var senha1 = "Trocar123"
+        
+        var user2 = "Aluno2" 
+        var senha2 = "Senha@123"
+
+        var user3 = "Aluno3" 
+        var senha3 = "123Trocar"
+
+        function mostrar(){
+            let userAtual = document.getElementById("idUser").value
+            let senhaAtual = document.getElementById("idSenha").value
+            let msg
+
+            if (userAtual == user1){
+                if (senhaAtual == senha1){
+                    msg = "Acesso Permitido"
+                }else{
+                    msg = "Senha incorreta"
+                }
+            } else if (userAtual == user2){
+                if (senhaAtual == senha2){
+                    msg = "Acesso Permitido"
+                }else{
+                    msg = "Senha incorreta"
+                }
+            } else if (userAtual == user3){
+                if (senhaAtual == senha3){
+                    msg = "Acesso Permitido"
+                }else{
+                    msg = "Senha incorreta"
+                }
+            } else {
+                msg = "Usuário não cadastrado"
+            }
+
+            document.getElementById("idOut").value = msg
+        }
+    </script>
+</body>
+</html>

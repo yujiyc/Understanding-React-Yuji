@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idEntrada1" placeholder="Informe o seu peso"><br><br>
+        <input type="number" id="idEntrada2" placeholder="Informe a sua altura"><br><br>
+         
+        <input type="button" value="Confirmar" onclick="mostrar()"><br><br>
+
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let peso = parseFloat(document.getElementById("idEntrada1").value)
+            let altura = parseFloat(document.getElementById("idEntrada2").value)
+
+            let imc = peso / (altura * altura);
+
+            if (imc < 18.5){
+                document.getElementById("idOut").innerText = "Abaixo do peso"
+            } else if (imc >= 18.5 && imc < 25){
+                document.getElementById("idOut").innerText = "Peso ideal"
+            } else if (imc >= 25 && imc < 30){
+                document.getElementById("idOut").innerText = "Sobrepeso"
+            } else if (imc >= 30 && imc < 40){
+                document.getElementById("idOut").innerText = "Obesidade"
+            } else{
+                document.getElementById("idOut").innerText = "Obesidade mórbida"
+            }
+        }
+    </script>
+</body>
+</html>

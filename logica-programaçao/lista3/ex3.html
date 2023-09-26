@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="idEntrada1" placeholder="Informe o nome do aluno"><br><br>
+        <input type="number" id="idEntrada2" placeholder="Informe a nota 1"><br><br>
+        <input type="number" id="idEntrada3" placeholder="Informe a nota 2"><br><br>
+         
+        <input type="button" value="Confirmar" onclick="mostrar()"><br><br>
+
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let nome = document.getElementById("idEntrada1").value;
+            let nota1 = parseFloat(document.getElementById("idEntrada2").value);
+            let nota2 = parseFloat(document.getElementById("idEntrada3").value);
+
+            let media = (nota1 + nota2) / 2;
+
+            if (media >= 7.0) {
+                document.getElementById("idOut").innerText = "O aluno " + nome + " ficou acima da média"
+            } else {
+                document.getElementById("idOut").innerText = "O aluno " + nome + " NÃO ficou acima da média"
+            }
+        }
+    </script>
+</body>
+</html>

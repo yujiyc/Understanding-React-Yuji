@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="number" id="idEntrada" placeholder="Informe o ano de nascimento"><br><br>
+         
+        <input type="button" value="Confirmar" onclick="mostrar()"><br><br>
+
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let anoNascimento = parseInt(document.getElementById("idEntrada").value);
+
+            var anoAtual = new Date().getFullYear();
+
+            var idade = anoAtual - anoNascimento;
+
+            if (idade >= 16) {
+                document.getElementById("idOut").innerText = "Você pode votar"
+            } else {
+                document.getElementById("idOut").innerText = "Você NÃO pode votar"
+            }
+        }
+    </script>
+</body>
+</html>

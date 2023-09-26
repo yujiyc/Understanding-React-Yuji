@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="idEntrada1" placeholder="Informe o nome"><br><br>
+        <select name="genero" id="idEntrada2" required>
+            <option value="" disabled selected>Informe o sexo</option>
+            <option value="M">Masculino</option>
+            <option value="W">Feminino</option>
+        </select><br><br>
+        <input type="number" id="idEntrada3" placeholder="Informe o valor"><br><br>
+         
+        <input type="button" value="Confirmar" onclick="mostrar()"><br><br>
+
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        function mostrar(){
+            let nome = document.getElementById("idEntrada1").value;
+            let genero = document.getElementById("idEntrada2").value;
+            let valor = parseFloat(document.getElementById("idEntrada3").value);
+
+            let desconto = 0;
+
+            if (genero === "M") {
+                desconto = 0.05;
+            } else if (genero === "W") {
+                desconto = 0.13;
+            }
+
+            let valorFinal = valor - (valor * desconto);
+
+            document.getElementById("idOut").innerText = "Valor com desconto = R$" + valorFinal
+        }
+    </script>
+</body>
+</html>
