@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 2</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="idNome" placeholder="Informe o nome">
+        <input type="number" id="idIdade" placeholder="Informe a idade">
+
+        <input type="button" value="Cadastrar" id="idBtCadastrar">
+        <input type="button" value="Relatorio" id="idBtRelatorio">
+        <br>
+        <output id="idOut"></output>
+    </form>
+
+    <script>
+        var pessoas = []
+        var menoresDeIdade = []
+        var nomesMenorDeIdade = []
+        var btCadastrar = document.getElementById("idBtCadastrar")
+        var btRelatorio = document.getElementById("idBtRelatorio")
+        var saida = document.getElementById("idOut")
+
+        // Cadastrar nomes e idades
+        btCadastrar.onclick = function () {
+            let isTelaValida = consistirTela()
+            if (isTelaValida) {
+                cadastrar()
+            }
+        }
+
+        // Função para verificar se a tela possui dados válidos
+        function consistirTela() {
+            let nome = document.getElementById("idNome").value
+            let idade = document.getElementById("idIdade").value
+
+            if (nome == "" || nome == " ") {
+                saida.value = "Campo Nome, preenchimento obrigatório"
+                saida.classList.add("alerta")
+                document.getElementById("idNome").focus()
+                return false
+            }
+
+            if (idade < 0 || idade > 130 || idade == "") {
+                saida.value = "Campo Idade inválido"
+                saida.classList.add("alerta")
+                document.getElementById("idIdade").focus()
+                return false
+            }
+
+            saida.classList.remove("alerta")
+            return true
+        }
+
+        // Função para cadastrar nomes e idades nos seus respectivos arrays
+        function cadastrar() {
+            let nome = document.getElementById("idNome").value
+            let idade = document.getElementById("idIdade").value
+
+            pessoas.push({nome: nome, idade: idade})
+            
+            console.log(pessoas)
+
+            document.getElementById("idNome").value = ""
+            document.getElementById("idIdade").value = ""
+        }
+
+        // Mostrar nomes cadastrados cuja idade é menos de 18 anos
+        btRelatorio.onclick = function () {
+            menoresDeIdade = pessoas.filter((pessoa) => pessoa.idade < 18);
+
+            console.log(menoresDeIdade)
+
+            nomesMenorDeIdade = menoresDeIdade.map((pessoa) => pessoa.nome);
+
+            console.log(nomesMenorDeIdade)
+            
+            var resultado = nomesMenorDeIdade.reduce(function (acumulador, nome, index) {
+                return acumulador + (index === 0 ? '' : ', ') + nome;
+            }, '');
+
+            console.log(resultado)
+
+            if(resultado.length != 0){
+                saida.value = "Menores de idade: " + resultado;
+            }else{
+                saida.value = "Nenhum menor de idade cadastrado"
+            }
+            
+        }
+    </script>
+</body>
+
+</html>

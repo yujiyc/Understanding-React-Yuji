@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3/4</title>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col40">
+
+        </div>
+        <div class="col20">
+            <div>
+                <input type="text" id="idNome" placeholder="Nome" class="entrada margens">
+            </div>
+
+            <div>
+                <input type="number" id="idSalario" placeholder="Salario" class="entrada margens">
+            </div>
+            
+            <div>
+                <input type="radio" name="nmGenero" id="idFem" value="F" checked>
+                <label for="idFem">Feminino</label>
+            </div>
+
+            <div>
+                <input type="radio" name="nmGenero"  id="idMasc" value="M">
+                <label for="idMasc">Masculino</label>
+            </div>
+
+            <div>
+                <button id="idBtCadastrar" class="margens">Cadastrar</button>
+                <button id="idBtRelatorio" class="margens">Relatório</button>
+            </div>
+            <div>
+                <output id="idOut"></output>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const salarioMinimo = 1212.00
+        var pessoas = []
+        var btCadastrar = document.getElementById("idBtCadastrar")
+        var btRelatorio = document.getElementById("idBtRelatorio")
+        var saida = document.getElementById("idOut")
+
+        // Cadastrar nomes e idades
+        btCadastrar.onclick = function () {
+            let isTelaValida = consistirTela()
+            if (isTelaValida) {
+                cadastrar()
+            }
+        }
+
+        // Função para verificar se a tela possui dados válidos
+        function consistirTela() {
+            let nome = document.getElementById("idNome").value
+            let salario = document.getElementById("idSalario").value
+
+            if (nome == "" || nome == " ") {
+                saida.value = "Campo Nome, preenchimento obrigatório"
+                saida.classList.add("alerta")
+                document.getElementById("idNome").focus()
+                return false
+            }
+
+            if (salario == "" || salario == " ") {
+                saida.value = "Campo Salário, preenchimento obrigatório"
+                saida.classList.add("alerta")
+                document.getElementById("idIdade").focus()
+                return false
+            }
+
+            saida.classList.remove("alerta")
+            return true
+        }
+
+        // Função para cadastrar nomes e idades nos seus respectivos arrays
+        function cadastrar() {
+            let nome = document.getElementById("idNome").value
+            let salario = document.getElementById("idSalario").value
+            let sexo = document.querySelector('input[name="nmGenero"]:checked').value
+
+            pessoas.push({nome: nome, salario: salario, sexo: sexo})
+            
+            console.log(pessoas)
+
+            document.getElementById("idNome").value = ""
+            document.getElementById("idSalario").value = ""
+        }
+
+        // Mostrar nomes cadastrados cuja idade é menos de 18 anos
+        btRelatorio.onclick = function () {
+            let mulheres = pessoas.filter((pessoa) => pessoa.sexo === 'F' && pessoa.salario > 5000);
+
+            let nomeMulheres = mulheres.map((pessoa) => pessoa.nome);
+            
+            var resultado = nomeMulheres.reduce(function (acumulador, nome, index) {
+                return acumulador + (index === 0 ? '' : ', ') + nome;
+            }, '');
+
+            console.log(resultado)
+
+            if(resultado.length != 0){
+                saida.value = "Mulheres com salário maior que 5K: " + resultado;
+            }else{
+                saida.value = "Nenhuma mulher com salário maior que 5K cadastrada"
+            }
+            
+        }
+    </script>
+</body>
+
+</html>
